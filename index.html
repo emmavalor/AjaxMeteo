@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
+		<title>Meteo AJAX</title>
+	</head>
+
+	<body>
+
+		<h1>Météo</h1>
+
+		<form method="post" action="traitement.php">
+				<input type="text" required name="Ville" id="city" placeholder="Nom de la vile"/><br>
+				<button type="submit" value="Envoyer">ENVOYER</button>
+		</form>
+
+		<section>
+			<p></p>
+			<p></p>
+			<img src="" alt="" id="iconTemps">
+		</section>
+
+		<p class="tempNow"></p>
+		
+		<div class="tempo">
+			<p class="temperature">50°C</p>
+			<div id="temp"></div>
+			<p class="temperature">0°C</p>
+		</div>
+
+		<section>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+
+			<div class="canvas">
+				<canvas id="chart"></canvas>
+			</div>
+
+		</section>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js" integrity="sha512-JxJpoAvmomz0MbIgw9mx+zZJLEvC6hIgQ6NcpFhVmbK1Uh5WynnRTTSGv3BTZMNBpPbocmdSJfldgV5lVnPtIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="meteo.js"></script>
+	</body>
+</html>
